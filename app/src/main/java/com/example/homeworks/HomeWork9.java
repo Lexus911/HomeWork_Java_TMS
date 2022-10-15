@@ -1,8 +1,6 @@
 package com.example.homeworks;
 
 import java.util.Arrays;
-
-
 import static java.util.Collections.reverseOrder;
 
 public class HomeWork9 {
