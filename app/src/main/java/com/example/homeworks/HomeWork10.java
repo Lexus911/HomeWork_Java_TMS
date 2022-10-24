@@ -98,7 +98,7 @@ class Shop{
     HashSet<Product> productListUnique = new LinkedHashSet<>();
 
     public void addProduct(Product product){
-        productList.add(new Product (product.getId(), product.getName(), product.getPrice()));
+        productList.add(product);//new Product (product.getId(), product.getName(), product.getPrice())
         productListUnique.addAll(productList);
         productList.clear();
         productList.addAll(productListUnique);
