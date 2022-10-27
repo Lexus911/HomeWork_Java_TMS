@@ -10,9 +10,9 @@ public class HomeWork11 {
 
         //Task_1
         Child child = new Child("Alex", 15, 175);
-        ChildToAdult<Child,Adult> childToAdult;
-        childToAdult = a -> new Adult("Alex", 31, 191);
-        Adult adult = childToAdult.growingUp(child);
+        GrowingUp<Child,Adult> growingUp;
+        growingUp = adult -> new Adult("Alex", 31, 191);
+        Adult adult = growingUp.grewUp(child);
         System.out.println(adult.toString());
 
         //Task_2
@@ -71,6 +71,6 @@ class Adult{
 }
 
 @FunctionalInterface
-interface ChildToAdult<T, R> {
-    R growingUp(T t);
+interface GrowingUp<T, R> {
+    R grewUp(T t);
 }
