@@ -1,16 +1,13 @@
 package com.example.homeworks;
 
 import android.annotation.SuppressLint;
-import android.os.Build;
-import androidx.annotation.RequiresApi;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Additional_HW_Task1 {
+public class HomeWork3_Task1 {
+
     @SuppressLint("SuspiciousIndentation")
-    @RequiresApi(api = Build.VERSION_CODES.N)
     public static void main(String[] args) {
 //Enter the number of strings
         int a;
@@ -34,38 +31,20 @@ public class Additional_HW_Task1 {
         }
 
 //Sort array of strings
-        Comparator<String> stringLengthComparator = new StringLengthSort();
-        Arrays.sort(arrStr, stringLengthComparator);
+        Arrays.sort(arrStr);
 
 //Output strings with the smallest length
-        System.out.println(arrStr[0]);
+        System.out.println("The smallest string: " + arrStr[0] + ", its length is: " + arrStr[0].length());
             for (int k = 1; k < arrStr.length; k++) {
                 if(arrStr[k].length() == arrStr[0].length())
-                System.out.println(arrStr[k]);
+                System.out.println("The smallest string: " + arrStr[k] + ", its length is: " + arrStr[k].length());
             }
 
 //Output strings with the biggest length
-        System.out.println(arrStr[arrStr.length - 1]);
-            for (int l = 1; l < arrStr.length-1; l++) {
+        System.out.println("The biggest string: " + arrStr[arrStr.length - 1] + ", its length is: " + arrStr[arrStr.length - 1].length());
+            for (int l = 0; l < arrStr.length-1; l++) {
             if(arrStr[l].length() == arrStr[arrStr.length - 1].length())
-                System.out.println(arrStr[l]);
-        }
-
-    }
-
-//class for use Array.sort
-    static class StringLengthSort implements Comparator<String> {
-        @Override
-        public int compare(String s1, String s2) {
-            if (s1.length() > s2.length()) {
-                return 1;
-            } else {
-                if (s1.length() < s2.length()) {
-                    return -1;
-                } else {
-                    return 0;
-                }
-            }
+                System.out.println("The biggest string: " + arrStr[l] + ", its length is: " + arrStr[l].length());
         }
     }
 }

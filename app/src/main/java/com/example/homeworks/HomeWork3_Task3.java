@@ -2,7 +2,7 @@ package com.example.homeworks;
 
 import java.util.Scanner;
 
-public class Additional_HW_Task3 {
+public class HomeWork3_Task3 {
     public static void main(String[] args) {
     //Enter the string content
         String[] arrStr = new String[3];
